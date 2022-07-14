@@ -1,0 +1,38 @@
+<!-- prettier-ignore -->
+{{ template "base" . }}
+{{ define "title" }} About {{ end }}
+
+{{ define "css" }}
+    <link rel="stylesheet" href="/static/style/about.css">
+{{ end }}
+
+{{ define "content" }}
+<div class="columns is-mobile is-centered mt-2">
+    <div class="column dcard is-2">
+        <div class="content">
+            <div class="title">About</div>
+            <p>
+                salad-proxy is a proxy server for
+                <a href="https://osu.ppy.sh">osu.ppy.sh</a> that allows you to
+                navigate through certain routes that would require an account.
+            </p>
+
+            <h4>Examples</h4>
+            <ul>
+                <li><a href="/d/1011011">/d/1011011</a></li>
+                <li>
+                    <a href="/web/osu-search.php?q=aether%20ritual&p&m=1&r=1">
+                        /web/osu-search.php
+                    </a>
+                </li>
+            </ul>
+
+            <p>Currently running with <b>{{ . }}</b> user(s).</p>
+            
+            <b class="doc-center">
+                <a href="https://github.com/salad-server/proxy">Source Code</a>
+            </b>
+        </div>
+    </div>
+</div>
+{{ end }}

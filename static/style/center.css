@@ -1,0 +1,13 @@
+.title {
+    font-size: 5em;
+    line-height: 0.8em;
+    color: hwb(171 0% 18%);
+}
+
+.err {
+    font-size: 8em;
+}
+
+.sub {
+    font-size: 2em;
+}

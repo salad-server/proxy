@@ -7,6 +7,6 @@
 
     "proxy": [
         "/d/*",
-		"/web/osu-search.php"
+        "/web/osu-search.php"
     ]
 }

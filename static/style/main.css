@@ -1,0 +1,31 @@
+.has-text-centered {
+    height: 99vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom-nav {
+    display: block;
+    position: fixed;
+    top: 90%;
+    width: 100%;
+    text-align: right;
+}
+
+.bottom-nav a {
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .bottom-nav {
+        text-align: center;
+    }
+}

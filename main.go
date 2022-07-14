@@ -14,6 +14,12 @@ func main() {
 		Mux:   chi.NewRouter(),
 	}
 
+	router.HandleIndex(map[string]string{
+		"/*": "404",
+		"/": "home",
+		"/about": "about",
+	})
+
 	router.HandleBancho(cfg.Proxy)
 	router.Serve()
 }

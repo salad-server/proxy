@@ -1,0 +1,21 @@
+{{ template "base" . }}
+{{ define "title" }} Home {{ end }}
+
+{{ define "css" }}
+    <link rel="stylesheet" href="/static/style/center.css">
+{{ end }}
+
+{{ define "js" }}
+    <script src="/static/js/hacker-text.js" charset="utf-8"></script>
+{{ end }}
+
+{{ define "content" }}
+<div class="has-text-centered">
+    <div class="middle">
+        <div class="hacker-text title is-primary">Salad Proxy</div>
+        <div class="hacker-text hacker-text-type hacker-test-fast sub">
+            Powered by {{ . }} user(s)
+        </div>
+    </div>
+</div>
+{{ end }}

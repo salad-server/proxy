@@ -1,0 +1,21 @@
+.dcard {
+    width: 50% !important;
+    box-shadow: 0 1px 1px #000;
+}
+
+.doc-center {
+    float: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .dcard {
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .dcard {
+        padding: 2em;
+        width: 100% !important;
+    }
+}
