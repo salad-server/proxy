@@ -15,8 +15,8 @@ func main() {
 	}
 
 	router.HandleIndex(map[string]string{
-		"/*": "404",
-		"/": "home",
+		"/*":     "404",
+		"/":      "home",
 		"/about": "about",
 	})
 

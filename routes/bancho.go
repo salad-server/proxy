@@ -13,14 +13,17 @@ import (
 var index = 0
 
 func infoLog(user, path string, values url.Values) {
-	values.Del("h"); values.Del("u")
+	values.Del("h")
+	values.Del("u")
 	log.Printf(
 		"[%s] %s?%s\n", user, path, values.Encode(),
 	)
 }
 
 func (router *Router) cycleUser() [2]string {
-	if index+1 >= len(router.Users) { index = 0 } else {
+	if index+1 >= len(router.Users) {
+		index = 0
+	} else {
 		index++
 	}
 
@@ -39,14 +42,13 @@ func (router *Router) Bancho(w http.ResponseWriter, r *http.Request) {
 	values := ban.Query()
 	user := router.cycleUser()
 
-	values.Del("h"); values.Del("u")
+	values.Del("h")
+	values.Del("u")
 	values.Set("u", user[0])
 	values.Set("h", user[1])
 
 	rurl := fmt.Sprintf("https://osu.ppy.sh%s?%s", r.URL.Path, values.Encode())
 	res, err := http.Get(rurl)
-
-	log.Println(rurl)
 
 	if err != nil {
 		util.InternalError(w)

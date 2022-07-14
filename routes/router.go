@@ -31,7 +31,6 @@ func (router *Router) HandleBancho(paths []string) {
 
 func (router *Router) HandleIndex(paths map[string]string) {
 	for path, fn := range paths {
-		log.Println(path, fn)
 		router.Mux.Get(path, router.Index(path, fn))
 	}
 
