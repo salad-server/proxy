@@ -1,0 +1,12 @@
+{
+    "port": 8080,
+    "accounts": [
+        ["<username>", "<password>"],
+        ["<username_2>", "<password_2>"]
+    ],
+
+    "proxy": [
+        "/d/*",
+		"/web/osu-search.php"
+    ]
+}
