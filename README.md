@@ -59,3 +59,7 @@ server {
 ```
 
 Assuming you have the proxy running on `proxy.servername.com`. If you had any issues setting this up you're welcome to open an issue. I'll get to it as soon as I can.
+
+## License
+
+  [MIT](LICENSE)
