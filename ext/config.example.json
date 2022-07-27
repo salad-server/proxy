@@ -1,5 +1,5 @@
 {
-    "port": 8080,
+    "port": 6000,
     "accounts": [
         ["<username>", "<password>"],
         ["<username_2>", "<password_2>"]

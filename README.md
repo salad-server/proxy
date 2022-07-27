@@ -15,7 +15,7 @@ $ git clone https://github.com/salad-server/proxy.git
 $ cd proxy
 ```
 
-Build the code and modify config:
+Build and configure:
 ```sh
 $ make build
 $ make build-prod # OPTIONAL: upx alternative
@@ -23,13 +23,13 @@ $ cp ext/config.example.json config.json
 $ nano config.json
 ```
 
-Configure your nginx:
+Setup nginx:
 ```sh
 $ sudo cp ext/nginx.conf /etc/nginx/conf.d/proxy.conf
 $ sudo nano /etc/nginx/conf.d/proxy.conf
 ```
 
-Finally, run the proxy with:
+Finally, run the proxy:
 ```sh
 $ ./proxy
 ```
