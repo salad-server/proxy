@@ -1,14 +1,15 @@
-# Run without building
+# Run without building (development)
 serve:
+	echo "serving proxy..."
 	go run *.go
 
-# Install the proxy
-install:
-	cp ext/config.example.json config.json
-	go build; upx proxy
-	nano config.json
-
-# Build and compress
+# Build
 build:
+	echo "building proxy..."
+	go build
+
+# Build with upx (compress output)
+build-prod:
+	echo "building proxy... (with upx)"
 	go build
 	upx proxy

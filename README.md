@@ -17,12 +17,16 @@ $ cd proxy
 
 Build the code and modify config:
 ```sh
-$ make install
+$ make build
+$ make build-prod # OPTIONAL: upx alternative
+$ cp ext/config.example.json config.json
+$ nano config.json
 ```
 
 Configure your nginx:
 ```sh
 $ sudo cp ext/nginx.conf /etc/nginx/conf.d/proxy.conf
+$ sudo nano /etc/nginx/conf.d/proxy.conf
 ```
 
 Finally, run the proxy with:
